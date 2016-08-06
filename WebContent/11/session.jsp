@@ -7,6 +7,9 @@
 <title>jsp内置对象session示例</title>
 </head>
 <body>
-Session 示例。
+session的唯一标示符：<%= session.getId() %><br/>
+session的创建时间：<%= new java.util.Date(session.getCreationTime()).toString() %><br/>
+session的最后访问时间：<%= new java.util.Date(session.getLastAccessedTime()).toString() %><br/>
+session的失效时间：<%= session.getMaxInactiveInterval() %><br/>
 </body>
 </html>
