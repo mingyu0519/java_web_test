@@ -2,6 +2,7 @@ package com.wangmy.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,10 +36,22 @@ public class LoginServlet extends HttpServlet {
 		String upwd = req.getParameter("upwd");
 		System.out.println("用户名是：" + uname);
 		System.out.println("密码是： " + upwd);
+		
+		String forward = null;
+		
 		if (uname.equals("wangmy") && upwd.equals("password")) {
-			resp.sendRedirect(req.getContextPath() + "/17/success.jsp");
+			forward = "/17/success.jsp";
+			RequestDispatcher rd = req.getRequestDispatcher(forward);
+			rd.forward(req, resp);
+			
+			// 请求重定向
+			// resp.sendRedirect(req.getContextPath() + "/17/success.jsp");
 		}else{
-			resp.sendRedirect(req.getContextPath() + "/17/error.jsp");
+			forward = "/17/success.jsp";
+			RequestDispatcher rd = req.getRequestDispatcher(forward);
+			rd.forward(req, resp);
+			// 请求重定向
+			// resp.sendRedirect(req.getContextPath() + "/17/error.jsp");
 		}
 	}
 

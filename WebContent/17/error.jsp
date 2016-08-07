@@ -11,6 +11,6 @@
 提交的信息为：<br/>
 用户名：<%=request.getParameter("uname") %><br/>
 密码：<%=request.getParameter("upwd") %><br/>
-<a href="login.jsp">登录页面</a>
+<a href="17/login.jsp">登录页面</a>
 </body>
 </html>
