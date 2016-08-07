@@ -12,6 +12,15 @@
   </servlet-mapping>
   
   <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>com.wangmy.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
   	<servlet-name>config</servlet-name>
   	<jsp-file>/13/config.jsp</jsp-file>
   	<init-param>

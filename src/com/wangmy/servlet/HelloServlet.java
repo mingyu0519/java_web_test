@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class HelloServlet extends HttpServlet {
+	private static final long serialVersionUID = 7568821705341384450L;
+
 	@Override
 	public void init() throws ServletException {
 		System.out.println("===================== init without parameters =====================");
