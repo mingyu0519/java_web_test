@@ -35,6 +35,11 @@ public class LoginServlet extends HttpServlet {
 		String upwd = req.getParameter("upwd");
 		System.out.println("用户名是：" + uname);
 		System.out.println("密码是： " + upwd);
+		if (uname.equals("wangmy") && upwd.equals("password")) {
+			resp.sendRedirect(req.getContextPath() + "/17/success.jsp");
+		}else{
+			resp.sendRedirect(req.getContextPath() + "/17/error.jsp");
+		}
 	}
 
 }

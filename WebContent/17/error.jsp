@@ -4,14 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>登录</title>
+<title>Insert title here</title>
 </head>
 <body>
-<form action="<%=request.getContextPath() %>/loginServlet" method="post">
-用户：<input type="text" name="uname"/><br/>
-密码：<input type="password" name="upwd"/><br/>
-<input type="submit" value="submit"/>
-<input type="reset" value="reset"/>
-</form>
+登录失败！<br/>
+提交的信息为：<br/>
+用户名：<%=request.getParameter("uname") %><br/>
+密码：<%=request.getParameter("upwd") %><br/>
+<a href="login.jsp">登录页面</a>
 </body>
 </html>
