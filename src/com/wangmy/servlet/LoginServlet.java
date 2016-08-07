@@ -11,8 +11,26 @@ public class LoginServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 4485789388603888943L;
 
+//	@Override
+//	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//		String uname = req.getParameter("uname");
+//		String upwd = req.getParameter("upwd");
+//		System.out.println("用户名是：" + uname);
+//		System.out.println("密码是： " + upwd);
+//	}
+
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("========== doGet ==========");
+		String uname = req.getParameter("uname");
+		String upwd = req.getParameter("upwd");
+		System.out.println("用户名是：" + uname);
+		System.out.println("密码是： " + upwd);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("========== doPost ==========");
 		String uname = req.getParameter("uname");
 		String upwd = req.getParameter("upwd");
 		System.out.println("用户名是：" + uname);
